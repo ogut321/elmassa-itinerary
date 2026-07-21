@@ -14,9 +14,9 @@
     "next": "^15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@sanity/vision": "^6.4.0",
-    "next-sanity": "^13.1.1",
-    "sanity": "^6.5.0"
+    "@sanity/vision": "^3.55.0",
+"next-sanity": "^10.5.0",
+"sanity": "^3.55.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
