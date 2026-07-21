@@ -14,17 +14,26 @@ export function Navbar() {
             <span className="block text-xs font-semibold uppercase tracking-[0.24em] text-gold">Itinerary</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
-          <a href="/#packages" className="transition hover:text-primary">Packages</a>
-          <a href="/#about" className="transition hover:text-primary">About</a>
-          <a href="/#contact" className="transition hover:text-primary">Contact</a>
-        </nav>
-        <a
-          href="/#packages"
-          className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/20 transition hover:-translate-y-0.5 hover:bg-teal-800"
-        >
-          View Trips
-        </a>
+<nav className="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
+  <Link href="/#packages" className="transition hover:text-primary">
+    Packages
+  </Link>
+
+  <Link href="/#about" className="transition hover:text-primary">
+    About
+  </Link>
+
+  <Link href="/#contact" className="transition hover:text-primary">
+    Contact
+  </Link>
+</nav>
+
+<Link
+  href="/#packages"
+  className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/20 transition hover:-translate-y-0.5 hover:bg-teal-800"
+>
+  View Trips
+</Link>
       </Container>
     </header>
   );
