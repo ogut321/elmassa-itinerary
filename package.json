@@ -10,14 +10,14 @@
     "sanity": "sanity"
   },
   "dependencies": {
-  "@sanity/vision": "^3.55.0",
-  "@tailwindcss/postcss": "^4.1.11",
-  "next": "15.5.0",
-  "next-sanity": "9.8.16",
-  "react": "19.1.0",
-  "react-dom": "19.1.0",
-  "sanity": "3.55.0"
-}
+    "@sanity/vision": "^6.4.0",
+    "@tailwindcss/postcss": "^4.1.11",
+    "next": "15.5.0",
+    "next-sanity": "^13.1.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sanity": "^6.5.0"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@types/node": "^20.19.9",
