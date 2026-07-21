@@ -14,8 +14,8 @@
     "next": "^15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@sanity/vision": "^3.55.0",
-"next-sanity": "^10.5.0",
+"@sanity/vision": "^3.55.0",
+"next-sanity": "^9.8.39",
 "sanity": "^3.55.0"
   },
   "devDependencies": {
