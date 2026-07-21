@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PackagePageProps): Promise<Me
 
   return {
     title: `${travelPackage.title} | El Massa Itinerary`,
-    description: travelPackage.summary,
+    description: travelPackage.summary ?? `${travelPackage.title} itinerary`,
   };
 }
 
@@ -64,7 +64,7 @@ export default async function PackagePage({ params }: PackagePageProps) {
           <aside className="h-fit rounded-[2rem] border border-teal-900/10 bg-slate-50 p-6 lg:sticky lg:top-28">
             <h2 className="text-2xl font-black text-slate-950">Package highlights</h2>
             <ul className="mt-6 space-y-4 text-sm leading-6 text-slate-600">
-              {travelPackage.highlights.map((highlight) => (
+              {(travelPackage.highlights ?? []).map((highlight) => (
                 <li key={highlight} className="flex gap-3">
                   <span className="mt-2 size-2 shrink-0 rounded-full bg-gold" />
                   <span>{highlight}</span>
@@ -80,7 +80,7 @@ export default async function PackagePage({ params }: PackagePageProps) {
             <p className="text-sm font-extrabold uppercase tracking-[0.3em] text-gold">Daily itinerary</p>
             <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950">A balanced 12-day sacred route</h2>
             <div className="mt-8 space-y-5">
-              {travelPackage.itinerary.map((day) => (
+              {(travelPackage.itinerary ?? travelPackage.dailyItinerary ?? []).map((day) => (
                 <article key={day.day} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-primary text-sm font-black text-white">{day.day}</div>

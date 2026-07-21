@@ -2,9 +2,13 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { PackageCard } from "@/components/package-card";
 import { Container } from "@/components/container";
-import { packages } from "@/data/packages";
+import { getPublishedPackages, getSiteSettings } from "@/lib/sanity-queries";
 
-export default function Home() {
+export default async function Home() {
+  const [siteSettings, packages] = await Promise.all([getSiteSettings(), getPublishedPackages()]);
+  const heroTitle = siteSettings.heroTitle || "Journey to The Holy Land";
+  const heroSubtitle = siteSettings.heroSubtitle || "Thoughtfully curated itineraries for sacred travel, premium comfort, and guided moments of reflection across the places that shaped faith history.";
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -13,10 +17,10 @@ export default function Home() {
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.35em] text-gold">Premium pilgrimage experiences</p>
             <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-[-0.05em] text-slate-950 sm:text-6xl lg:text-7xl">
-              Journey to The Holy Land
+              {heroTitle}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Thoughtfully curated itineraries for sacred travel, premium comfort, and guided moments of reflection across the places that shaped faith history.
+              {heroSubtitle}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#packages" className="rounded-full bg-primary px-7 py-4 text-center text-sm font-extrabold text-white shadow-xl shadow-teal-900/20 transition hover:-translate-y-0.5 hover:bg-teal-800">
