@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: ogut321/elmassa-itinerary
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "website"
+    label: "Website El Massa"
+    files:
+      - label: "Beranda"
+        name: "home"
+        file: "content/home.json"
+        fields:
+          - {label: "Judul", name: "title", widget: "string"}
+          - {label: "Sub Judul", name: "subtitle", widget: "text"}
+          - {label: "Banner", name: "banner", widget: "image"}
